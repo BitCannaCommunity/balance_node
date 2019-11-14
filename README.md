@@ -3,14 +3,14 @@ Basic script in python3 with Botogram to query info at BitCanna masternode or fu
 
 **Commands:**
 
-*/getbalance - Show the balance of your wallet
-*/getblockcount - Check this to know if your fullnode-masternode is synced
-*/getlist - This will show the last Transactions in your wallet
-*/getmasternode - This will show the online MASTERNODES
-*/getpeers - This will show the online NODES (both)
-*/getunspent - This will show amount to transfer in command-line to another address
-*/getstakeinfo - Soon
-*/help - Show this help message.
+* /getbalance - Show the balance of your wallet
+* /getblockcount - Check this to know if your fullnode-masternode is synced
+* /getlist - This will show the last Transactions in your wallet
+* /getmasternode - This will show the online MASTERNODES
+* /getpeers - This will show the online NODES (both)
+* /getunspent - This will show amount to transfer in command-line to another address
+* /getstakeinfo - Soon
+* /help - Show this help message.
 
 **You need for running this script:**
 * To have a Bot created in Telegram with @BotFather and a valid API KEY
