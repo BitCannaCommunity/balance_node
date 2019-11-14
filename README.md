@@ -1,5 +1,7 @@
 # BitCanna-balance_node
-Basic script in python3 with Botogram to query info at BitCanna masternode or fullnode on Linux from Telegram
+Basic script in python3 with Botogram to query info at BitCanna masternode or fullnode on Linux from Telegram.
+* We are amateur developers who love touch up all... if you want to help us with new tips are free to contribute.
+* You can find us in Telegram at: @BitcannaGlobal
 
 **Commands:**
 
