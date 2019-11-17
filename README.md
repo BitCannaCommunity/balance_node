@@ -1,7 +1,7 @@
 # BitCanna-balance_node
-Basic script in python3 with Botogram to query info at BitCanna masternode or fullnode on Linux from Telegram.
-* We are amateur developers who love touch up all... if you want to help us with new tips are free to contribute.
-* You can find us in Telegram at: @BitcannaGlobal
+Basic script in python3 with Botogram to query info from a BitCanna masternode or fullnode on Linux via Telegram.
+* We are amateur developers who love to create useful tools... if you want to help us with new ideas feel free to contribute.
+* You can find us on Telegram at: [@BitcannaGlobal](https://t.me/BitcannaGlobal)
 
 **Commands:**
 
@@ -23,26 +23,16 @@ Basic script in python3 with Botogram to query info at BitCanna masternode or fu
 
 # Step-by-step guide:
 
-**1) To have a Bot created in Telegram with @BotFather and a valid API KEY. Telegram side.**
+**1) Create your own Bot in Telegram**
 
-You must create a Telegram bot using the @BotFather. 
-* Call him, /start and follow this steps:
-
-* /newbot → And put a cool name for your bot. This name could have spaces like “MN MegaBot”
-  
-    After the name you must put an Alias or ID for your bot, and must end in _bot or bot, as example: MN_Mega_Bot
-    When finish, it showed the TOKEN for your bot (like a unique password to work on Telegram )
-    If you need to obtain again the TOKEN, edit the Bot, or set advanced params you can typing /mybot
-
-Selecting API Token you will get again the TOKEN key, take note it, needed to end the set-up.
-Also you must note it the name of the bot and alias, in my example @myfullnodebot
-
+You can find the official Telegram instructions right here:
+https://core.telegram.org/bots#6-botfather
 
 **2) The linux masternode/fullnode side**
 
 Download the script balance_node.py, choose one of the following ways:
 
-a) Download the script balance_node.py in and unzip it 
+a) Download the script balance_node.py and unzip it 
   * $ wget https://github.com/RaulBernal/BitCanna-balance_node/archive/master.zip
   * $ unzip master.zip
   * $ cd master
@@ -64,18 +54,18 @@ The easy way is:
 * $ sudo apt-get install python3-pip
 * $ sudo pip3 install botogram2
 
-If the last fail you can check this info:
+If the last command fails, you can check this info:
 
 * You can install botogram following this instructions:
 https://github.com/python-botogram/botogram
 
-* You can easily install it with pip (if it needed) following this instructions:
+* You can easily install it with pip (if needed) following this instructions:
 https://stackoverflow.com/questions/6587507/how-to-install-pip-with-python-3
 
 
-Change your own settings in balance, edit with nano or vi:  nano balance_node.py
-* You must change the route to the binaries
-* Must replace also your Token 
+Change your own setting, edit with nano or vi:  nano balance_node.py
+* You must change the path to the binaries
+* Must also replace your API Token 
 
 
 Execute it!!!
