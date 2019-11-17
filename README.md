@@ -30,16 +30,7 @@ https://core.telegram.org/bots#6-botfather
 
 **2) The linux masternode/fullnode side**
 
-Download the script balance_node.py, choose one of the following ways:
-
-a) Download the script balance_node.py and unzip it 
-  * $ wget https://github.com/RaulBernal/BitCanna-balance_node/archive/master.zip
-  * $ unzip master.zip
-  * $ cd master
-
-b) or clone with git
-  * $ git clone https://github.com/RaulBernal/BitCanna-balance_node.git
-  * $ cd BitCanna-balance_node
+Download the script balance_node.py
 
 When you run the script balance_node.py the first time it indicates that you need the Botogram library
 
