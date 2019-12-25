@@ -63,7 +63,7 @@ def getpeers_command(chat, message, args):
     loaded_json = json.loads(get_nodes)
     msg = ""
     count = 0
-    file_peers = r'/home/bitcanna/peers.txt'
+    file_peers = os.path.join(path_to_bin + '/peers.txt') 
     chat.send ("Building a list...") 
     print ("List of online NODES")
     print ("==========================")
