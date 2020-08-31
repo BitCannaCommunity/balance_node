@@ -4,10 +4,8 @@ import os
 import botogram
 import json
 
-path_to_bin = "/home/bitcanna/bcna-1.0.1-unix"  #  Put your own without final /
+from config import token, path_to_bin,
 
-#About Telegram API with Botogram
-token = '3333333:AAABBBgggghjkjhkkkkkkkkkkkkk' #  Put your own token
 bot = botogram.create(token)
 bot.about = "Balance BOT for your own fullnode-masternode. \nIf you found any bugs or have suggestions for new functionalities...\nPlease contact us!"
 bot.owner = "@MrSteelBCNA and/or @Raul_BitCannaES"
