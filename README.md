@@ -42,10 +42,10 @@ Traceback (most recent call last):
 ImportError: No module named 'botogram'
 
 The easy way is:
-
-* $ sudo apt-get install python3-pip
-* $ sudo pip3 install botogram2
-
+```
+$ sudo apt-get install python3-pip
+$ sudo pip3 install botogram2
+``` 
 If the last command fails, you can check this info:
 
 * You can install botogram following this instructions:
@@ -65,7 +65,8 @@ Change your own setting, edit with nano or vi:  nano config.py
 
 Execute it!!!
 
-```bitcanna@mymasternode:~$ python3 balance_node.py
+```
+bitcanna@mymasternode:~$ python3 balance_node.py
 
 12:49.27 -   INFO    - Your bot is now running!
 12:49.27 -   INFO    - Press Ctrl+C to exit.
