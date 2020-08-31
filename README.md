@@ -12,6 +12,7 @@ Basic script in python3 with Botogram to query info from a BitCanna masternode o
 * /getpeers - This will show the online NODES (both)
 * /getunspent - This will show amount to transfer in command-line to another address
 * /getstakeinfo - Soon
+* /subscribe - Subscribe your Telegram user to alerts
 * /help - Show this help message.
 
 **You need for running this script:**
@@ -53,17 +54,20 @@ https://github.com/python-botogram/botogram
 * You can easily install it with pip (if needed) following this instructions:
 https://stackoverflow.com/questions/6587507/how-to-install-pip-with-python-3
 
+Obtain balance_node:
+git clone https://github.com/BitCannaCommunity/balance_node.git
 
-Change your own setting, edit with nano or vi:  nano balance_node.py
+
+Change your own setting, edit with nano or vi:  nano config.py
 * You must change the path to the binaries
-* Must also replace your API Token 
+* Must also replace your API Telegram Bot Token 
 
 
 Execute it!!!
 
-bitcanna@mymasternode:~$ python3 balance_node.py
+```bitcanna@mymasternode:~$ python3 balance_node.py
 
 12:49.27 -   INFO    - Your bot is now running!
 12:49.27 -   INFO    - Press Ctrl+C to exit.
-
+``` 
 **3) Search the bot in Telegram (use the @alias) and /start it**
