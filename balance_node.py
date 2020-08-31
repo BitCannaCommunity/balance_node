@@ -4,7 +4,7 @@ import os
 import botogram
 import json
 
-from config import token, path_to_bin,
+from config import token, path_to_bin
 
 bot = botogram.create(token)
 bot.about = "Balance BOT for your own fullnode-masternode. \nIf you found any bugs or have suggestions for new functionalities...\nPlease contact us!"
