@@ -1,6 +1,6 @@
 # BitCanna-balance_node
 Basic script in python3 with Botogram to query info from a BitCanna masternode or fullnode on Linux via Telegram.
-* We are amateur developers who love to create useful tools... if you want to help us with new ideas feel free to contribute.
+* We are community developers who love to create useful tools... if you want to help us with new ideas feel free to contribute.
 * You can find us on Telegram at: [@BitcannaGlobal](https://t.me/BitcannaGlobal)
 
 **Commands:**
@@ -55,8 +55,9 @@ https://github.com/python-botogram/botogram
 https://stackoverflow.com/questions/6587507/how-to-install-pip-with-python-3
 
 Obtain balance_node:
+```
 git clone https://github.com/BitCannaCommunity/balance_node.git
-
+```
 
 Change your own setting, edit with nano or vi:  nano config.py
 * You must change the path to the binaries
@@ -66,7 +67,8 @@ Change your own setting, edit with nano or vi:  nano config.py
 Execute it!!!
 
 ```
-bitcanna@mymasternode:~$ python3 balance_node.py
+$ cd balance_node
+$ python3 balance_node.py
 
 12:49.27 -   INFO    - Your bot is now running!
 12:49.27 -   INFO    - Press Ctrl+C to exit.
