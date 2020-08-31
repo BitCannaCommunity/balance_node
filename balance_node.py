@@ -97,16 +97,14 @@ def startmasternode_command(chat, message, args):
     """Launch the MN start command"""
     start_MN = os.popen(path_to_bin + "/bitcanna-cli masternode start-many").read()
     print("Result:", start_MN)
-    msg = str(start_MN)
-    chat.send("The current Block is " + msg)
+    chat.send('Output: \n' + start_MN)
 #==========================================================================
 @bot.command("startdaemon")
 def startdaemon_command(chat, message, args):
     """Launch the BitCanna daemon"""
     start_daemon= os.popen(path_to_bin + "/bitcannad -daemon").read()
     print("Result:", start_daemon)
-    msg = str(start_daemon)
-    chat.send("The current Block is " + msg)
+    chat.send('Output: \n' + start_daemon)
 #==============================================================================
 @bot.prepare_memory
 def init(shared):
