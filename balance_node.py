@@ -108,7 +108,7 @@ def subscribe_command(shared, chat, message, args):
 @bot.timer(3600) #every hour
 def checker(bot, shared):
     get_info = os.popen(path_to_bin + "/bitcanna-cli getinfo").read()
-    if get_info.find('error:') == 0: #-1 is running
+    if get_info.find('error:') == '': #-1 is running
          for chat in shared["subs"]:
             bot.chat(chat).send("Hey! your BitCanna daemon is down!")
          starting = os.popen(path_to_bin + "/bitcannad -daemon").read()
