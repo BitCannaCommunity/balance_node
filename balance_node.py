@@ -91,6 +91,22 @@ def getunspent_command(chat, message, args):
     print(msg) #Is printed in console , could be saved in a file and sent by telegram
     #chat.send (msg) #if there are a lot of inputs Telegram can't handle in a message
     chat.send ("Make your transfer with " + (str(total)) + " BCNA")
+#==========================================================================
+@bot.command("startmasternode")
+def startmasternode_command(chat, message, args):
+    """Launch the MN start command"""
+    start_MN = os.popen(path_to_bin + "/bitcanna-cli masternode start-many").read()
+    print("Result:", start_MN)
+    msg = str(start_MN)
+    chat.send("The current Block is " + msg)
+#==========================================================================
+@bot.command("startdaemon")
+def startdaemon_command(chat, message, args):
+    """Launch the BitCanna daemon"""
+    start_daemon= os.popen(path_to_bin + "/bitcannad -daemon").read()
+    print("Result:", start_daemon)
+    msg = str(start_daemon)
+    chat.send("The current Block is " + msg)
 #==============================================================================
 @bot.prepare_memory
 def init(shared):
@@ -106,7 +122,7 @@ def subscribe_command(shared, chat, message, args):
 @bot.timer(3600) #every hour
 def checker(bot, shared):
     get_info = os.popen(path_to_bin + "/bitcanna-cli getinfo").read()
-    if get_info.find('error:') == '': #-1 is running
+    if get_info == '': #-1 is running
          for chat in shared["subs"]:
             bot.chat(chat).send("Hey! your BitCanna daemon is down!")
          starting = os.popen(path_to_bin + "/bitcannad -daemon").read()
