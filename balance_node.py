@@ -4,10 +4,8 @@ import os
 import botogram
 import json
 
-path_to_bin = "/home/bitcanna/bcna-1.0.1-unix"  #  Put your own without final /
+from config import token, path_to_bin
 
-#About Telegram API with Botogram
-token = '3333333:AAABBBgggghjkjhkkkkkkkkkkkkk' #  Put your own token
 bot = botogram.create(token)
 bot.about = "Balance BOT for your own fullnode-masternode. \nIf you found any bugs or have suggestions for new functionalities...\nPlease contact us!"
 bot.owner = "@MrSteelBCNA and/or @Raul_BitCannaES"
@@ -93,7 +91,44 @@ def getunspent_command(chat, message, args):
     print(msg) #Is printed in console , could be saved in a file and sent by telegram
     #chat.send (msg) #if there are a lot of inputs Telegram can't handle in a message
     chat.send ("Make your transfer with " + (str(total)) + " BCNA")
+#==========================================================================
+@bot.command("startmasternode")
+def startmasternode_command(chat, message, args):
+    """Launch the MN start command"""
+    start_MN = os.popen(path_to_bin + "/bitcanna-cli masternode start-many").read()
+    print("Result:", start_MN)
+    chat.send('Output: \n' + start_MN)
+#==========================================================================
+@bot.command("startdaemon")
+def startdaemon_command(chat, message, args):
+    """Launch the BitCanna daemon"""
+    start_daemon= os.popen(path_to_bin + "/bitcannad -daemon").read()
+    print("Result:", start_daemon)
+    chat.send('Output: \n' + start_daemon)
 #==============================================================================
+@bot.prepare_memory
+def init(shared):
+    shared["subs"] = []
+
+@bot.command("subscribe")
+def subscribe_command(shared, chat, message, args):
+    """Subscribe to the hourly daemon checking"""
+    subs = shared["subs"]
+    subs.append(chat.id)
+    shared["subs"] = subs
+
+@bot.timer(3600) #every hour
+def checker(bot, shared):
+    get_info = os.popen(path_to_bin + "/bitcanna-cli getinfo").read()
+    if get_info == '': #-1 is running
+         for chat in shared["subs"]:
+            bot.chat(chat).send("Hey! your BitCanna daemon is down!")
+         starting = os.popen(path_to_bin + "/bitcannad -daemon").read()
+    else:
+        print('Daemon is running')
+        #bot.chat(chat.id).send(starting)
+#==============================================================================
+
 
 # This runs the bot, until ctrl+c is pressed
 if __name__ == "__main__":
