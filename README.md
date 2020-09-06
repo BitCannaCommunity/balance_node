@@ -70,6 +70,10 @@ Execute it!!!
 $ cd balance_node
 $ python3 balance_node.py
 
+or Execute it on background
+
+bitcanna@mymasternode:~$ nohup python3 balance_node.py &
+
 12:49.27 -   INFO    - Your bot is now running!
 12:49.27 -   INFO    - Press Ctrl+C to exit.
 ``` 
