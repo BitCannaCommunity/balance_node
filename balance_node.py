@@ -123,7 +123,7 @@ def checker(bot, shared):
     if get_info == '': #-1 is running
          for chat in shared["subs"]:
             bot.chat(chat).send("Hey! your BitCanna daemon is down!")
-         starting = os.popen(path_to_bin + "/bitcannad -daemon").read()
+         #starting = os.popen(path_to_bin + "/bitcannad -daemon").read() #may cause corruption on wallet.dat
     else:
         print('Daemon is running')
         #bot.chat(chat.id).send(starting)
